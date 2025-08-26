@@ -31,7 +31,7 @@ class FilterthinktagsPlugin(Star):
                 if tags_to_filter:
                     tag_group = '|'.join(re.escape(tag) for tag in tags_to_filter)
                     pattern = rf'<({tag_group})>.*?</\1>\s*'
-                    new_text = re.sub(pattern, new_text, flags=re.DOTALL)
+                    new_text = re.sub(pattern, '', new_text, flags=re.DOTALL)
 
                 # 过滤无标签的、可能跨行的文本块
                 if prefixes_to_filter:
