@@ -10,11 +10,17 @@
     ]
   },
   "filtered_prefixes": {
-    "type": "list",
+    "type": "list", 
     "description": "要过滤的无标签文本行前缀",
     "hint": "在此添加要过滤的文本行前缀，例如 'Thinking:' 或 'Pondering:'。插件会移除以此处文本开头的、直到空行或结尾的整个文本块。",
     "default": [
       "Thinking:"
     ]
+  },
+  "content_separator": {
+    "type": "string",
+    "description": "正文分隔符",
+    "hint": "用于分隔思考内容和正文的特殊字符，例如 '@@@'。插件会删除此分隔符前的所有内容，只保留分隔符后的正文。",
+    "default": "@@@"
   }
 }
